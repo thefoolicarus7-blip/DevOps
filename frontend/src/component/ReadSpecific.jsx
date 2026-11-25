@@ -10,7 +10,7 @@ const ReadSpecific = () => {
 
   const getDate = async () => {
     const data = await axios({
-      url: `http://localhost:8000/api/product/${id}`,
+      url: `/api/product/${id}`,
       method: "GET",
     });
     setProduct(data.data.result);

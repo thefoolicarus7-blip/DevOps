@@ -8,7 +8,7 @@ const ReadAll = () => {
   const navigate = useNavigate();
   const getData = async () => {
     const data = await axios({
-      url: "http://localhost:8000/api/product",
+      url: "/api/product",
       method: "GET",
     });
     setProducts(data.data.result);
@@ -32,7 +32,7 @@ const ReadAll = () => {
   const handleDelete = (_id) => {
     return async () => {
       const data = await axios({
-        url: `http://localhost:8000/api/product/${_id}`,
+        url: `/api/product/${_id}`,
         method: "DELETE",
       });
       getData();

@@ -19,7 +19,7 @@ const UpdateForm = () => {
     };
 
     const result = await axios({
-      url: `http://localhost:8000/api/product/${params.id}`,
+      url: `/api/product/${params.id}`,
       method: "PATCH",
       data: data,
     });
@@ -27,7 +27,7 @@ const UpdateForm = () => {
 
   const getDate = async () => {
     const data = await axios({
-      url: `http://localhost:8000/api/product/${params.id}`,
+      url: `/api/product/${params.id}`,
       method: "GET",
     });
     setName(data.data.result.name);
