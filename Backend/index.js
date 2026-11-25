@@ -1,3 +1,4 @@
+import "dotenv/config";
 // make express app
 // attach port to it
 
